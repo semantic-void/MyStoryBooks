@@ -1,0 +1,14 @@
+<div class='fixed-action-btn.left'>
+  <a
+    href='#'
+    id='go-back-button'
+    class='btn-floating btn-large waves-effect waves-light red'
+  ><i class='fas fa-arrow-left'></i></a>
+</div>
+
+<script>
+  // Go back in history when the button is clicked
+  document.getElementById('go-back-button').addEventListener('click', function()
+  { history.back(); });
+
+</script>

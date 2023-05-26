@@ -1,0 +1,49 @@
+<h5 class='grey-text text-darken-2'>Dashboard</h5>
+<h3 class='cyan-text text-darken-3'>Welcome {{name}}</h3>
+<p>Here are your stories</p>
+
+{{#if stories}}
+  <table class='striped'>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each stories}}
+        <tr>
+          <td><a
+              href='/stories/{{_id}}'
+              class='cyan-text text-darken-2'
+            >{{title}}</a></td>
+          <td>{{formatDate createdAt 'MMMM Do YYYY, hh:mm:ss a'}}</td>
+          <td><span class='chip cyan lighten-5'>{{status}}</span></td>
+          <td>
+            <a
+              href='/stories/edit/{{_id}}'
+              class='btn-floating waves-effect waves-light cyan btn btn-float'
+            >
+              <i class='fas fa-edit'></i>
+            </a>
+            <form
+              action='/stories/{{_id}}'
+              method='post'
+              id='delete-form'
+              class='btn-inline'
+            >
+              <input type='text' name='_method' value='delete' hidden />
+              <button class='btn-floating waves-effect waves-light red'>
+                <i class='fas fa-trash-alt'></i>
+              </button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>Have not created any stories</p>
+{{/if}}

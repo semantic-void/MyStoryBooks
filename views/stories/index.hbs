@@ -1,0 +1,27 @@
+<h1 class="cyan-text text-darken-3">Stories</h1>
+
+<div class="row">
+  {{#each stories}}
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          {{{editIcon user ../user _id}}}
+        </div>
+        <div class="card-content center-align">
+          <h5 class="cyan-text text-darken-2">{{title}}</h5>
+          {{!-- We can also user truncate class --}}
+          <p class="">{{truncate ( stripTags body) 100}}</p> 
+          <div class="chip">
+            <img src="{{user.image}}" alt="" />
+            <a href="/stories/user/{{user._id}}" class="cyan-text text-darken-2">{{user.displayName}}</a>
+          </div>
+        </div>
+        <div class="card-action center-align">
+          <a href="/stories/{{_id}}" class="btn cyan">Read More</a>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <p class="center-align">No stories to display.</p>
+  {{/each}}
+</div>
