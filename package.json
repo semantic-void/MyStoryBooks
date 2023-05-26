@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node app",
     "dev": "cross-env NODE_ENV=development nodemon app.js",
-    "build": "react-scripts build"
+    "build": "npm i"
   },
   "author": "Sachin Sharma",
   "license": "ISC",
