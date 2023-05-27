@@ -1,0 +1,1 @@
+module.exports = ["dashboard.hbs","login.hbs"];

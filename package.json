@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node app",
     "dev": "cross-env NODE_ENV=development nodemon app.js",
-    "build": "handlebars views -f public/views.js && node build.js"
+    "build": "handlebars views -f views.js && node build.js"
   },
   "author": "Sachin Sharma",
   "license": "ISC",
