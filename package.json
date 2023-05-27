@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node app",
-    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app",
     "build": "handlebars views -f views.js && node build.js"
   },
   "author": "Sachin Sharma",
@@ -22,10 +22,8 @@
     "mongodb": "^5.5.0",
     "mongoose": "^7.1.1",
     "morgan": "^1.10.0",
-    "netlify-lambda": "^2.0.16",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
-    "passport-google-oauth20": "^2.0.0",
-    "serverless-http": "^3.2.0"
+    "passport-google-oauth20": "^2.0.0"
   }
 }
