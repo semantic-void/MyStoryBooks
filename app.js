@@ -111,3 +111,8 @@ app.listen(
   PORT,
   console.log(`Server running in ${process.env.NODE_ENV} made on PORT ${PORT}`)
 );
+
+// Add to specify the node version for hosting service {render in aur case}.
+// "engines": {
+//   "node": "18.16.0"
+// },
