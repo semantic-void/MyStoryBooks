@@ -9,7 +9,7 @@ const passport = require('passport');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
-
+const serverless = require('serverless-http');
 // Load config
 dotenv.config({ path: './config/config.env' });
 
@@ -111,3 +111,5 @@ app.listen(
   PORT,
   console.log(`Server running in ${process.env.NODE_ENV} made on PORT ${PORT}`)
 );
+// cross-env NODE_ENV = production node app
+module.exports.handler = serverless(app);
